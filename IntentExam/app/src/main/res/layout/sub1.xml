@@ -17,30 +17,60 @@
         android:id="@+id/checkBox1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#f0ff0f"
-        android:text="동의합니다." />
+        android:text="동의합니다."
+        android:textColor="#f0ff0f" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="bottom|center">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/newActivity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#f0f0"
-            android:text="새창" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center|bottom">
 
-        <Button
-            android:id="@+id/finish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:background="#ff0000"
-            android:text="취소" />
+            <EditText
+                android:id="@+id/inputPdfName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="pdf파일명을 입력하세요."
+                android:textColor="#00ff00"/>
 
+            <Button
+                android:id="@+id/openButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="열기"
+                android:background="#00ff00"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/newActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginLeft="90dp"
+                android:background="#f0f0"
+                android:text="새창" />
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="30dp"
+                android:background="#ff0000"
+                android:text="취소" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
