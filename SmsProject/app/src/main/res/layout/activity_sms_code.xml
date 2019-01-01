@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:lineSpacingMultiplier="1"
+        android:textSize="40dp"
+        android:background="@drawable/edittext_style" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 / 80 바이트"
+        android:textColor="#ff88ff"
+        android:textSize="20dp"
+        android:layout_alignRight="@id/editText1"
+        android:layout_below="@id/editText1"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전송"
+        android:textSize="20dp"
+        android:layout_alignTop="@id/button2"
+        android:layout_toLeftOf="@id/button2"
+        android:layout_marginRight="45dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닫기"
+        android:textSize="20dp"
+        android:layout_below="@id/textView"
+        android:layout_alignLeft="@id/textView"/>
+</RelativeLayout>
