@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/m_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.project.inki.fragmentexam.MainFragment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sub_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/m_container">
+
+        <fragment
+            android:id="@+id/imageTextFragment"
+            android:name="com.project.inki.fragmentexam.ListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <fragment
+            android:id="@+id/imageViewFragment"
+            android:name="com.project.inki.fragmentexam.ImageFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imageTextFragment" />
+    </RelativeLayout>
+
+</RelativeLayout>
