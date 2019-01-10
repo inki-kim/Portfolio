@@ -20,5 +20,13 @@
         android:text="메뉴 화면으로"
         android:layout_alignParentLeft="true" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:text="액션바 바꾸기" />
+
 
 </RelativeLayout>

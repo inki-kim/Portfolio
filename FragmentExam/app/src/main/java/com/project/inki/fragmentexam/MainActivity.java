@@ -3,8 +3,12 @@ package com.project.inki.fragmentexam;
 import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements ListFragment.ImageSelectionCallback{
@@ -47,6 +51,21 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Imag
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {         //액션바 생성 menu폴더에 menu_list.xml을 만들고 item을 추가한것을 파라메터로 값을 전달하여 inflate
         getMenuInflater().inflate(R.menu.menu_list,menu);
+
+        View v=menu.findItem(R.id.menu_search).getActionView();
+        if(v!=null){
+            final EditText editText=v.findViewById(R.id.editText2);
+
+            if(editText!=null){
+                editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                    @Override
+                    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                        Toast.makeText(getApplicationContext(),v.getText().toString(),Toast.LENGTH_SHORT).show();
+                        return false;
+                    }
+                });
+            }
+        }
         return super.onCreateOptionsMenu(menu);
     }
 

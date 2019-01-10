@@ -1,7 +1,6 @@
 package com.project.inki.fragmentexam;
 
-import android.app.ActionBar;
-import android.arch.lifecycle.Lifecycle;
+import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,7 +13,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainFragment extends Fragment {
-    Button button1;
+    Button button1,button2;
 
     @Nullable
     @Override
@@ -23,12 +22,26 @@ public class MainFragment extends Fragment {
 
         Toast.makeText(getActivity().getApplicationContext(), "onCreateView호출", Toast.LENGTH_SHORT).show();
         button1 = viewGroup.findViewById(R.id.button1);
+        button2 = viewGroup.findViewById(R.id.button2);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity activity = (MainActivity) getActivity();
                 activity.onFragmentChanged(0);
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity activity = (MainActivity) getActivity();
+                ActionBar actionBar=activity.getSupportActionBar();
+
+                actionBar.setLogo(R.drawable.home);
+                actionBar.setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP|ActionBar.DISPLAY_SHOW_HOME|ActionBar.DISPLAY_USE_LOGO);
+
+
             }
         });
 

@@ -11,7 +11,9 @@
         android:id="@+id/menu_search"
         android:title="검색"
         android:icon="@drawable/image2"
-        app:showAsAction="always"/>
+        android:orderInCategory="102"
+        app:showAsAction="always|withText"
+        app:actionLayout="@layout/search_layout"/>
 
     <item
         android:id="@+id/menu_setting"
