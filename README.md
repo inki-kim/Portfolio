@@ -6,3 +6,4 @@ My Portfolio
 				    2. IntentExam
 				    3. ServiceBroadPermissionExam
 				    4. EventExam
+				    5. FragmentExam
