@@ -8,3 +8,5 @@ My Portfolio
 				    4. EventExam
 				    5. FragmentExam
 				    6. ActionBarExam
+				    7. CustomerInputDisplay
+				    8. WebViewDisplay
