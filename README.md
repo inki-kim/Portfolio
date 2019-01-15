@@ -11,4 +11,6 @@ My Portfolio
 				    7. CustomerInputDisplay
 				    8. WebViewDisplay
 				    9. CustomViewExam
+				    10.CompositenessWidgetExam
+				    11.CalendarExam
 
